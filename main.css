@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+html{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 100%;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    transition: 0.6s;
+    -webkit-touch-callout: none;
+    -ms-touch-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    text-decoration: none;
+}
+/***************PROFILEPAGE*******************/
+.profilewrapper {
+    width: 100%;
+    height: calc(100% + 10%);
+    background: rgba(3, 47, 84, 0.24);
+    position: absolute;
+    display: table;
+}
+.profilewrapper.profile {
+    height: calc(100% + 35%);
+}
+.profilewrapper.profile.doc {
+    height: calc(100% + 135%);
+}
+.profile-left span#exitpa {
+    display: none;
+}
+.profile-left, .nav-left{
+    float: left;
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgb(16, 92, 154);
+    padding: 0;
+    transition: 1s;
+}
+.sidebarnav-width{
+    width: 20%;
+    padding: 0px 16px;
+}
+.profile-sidenav {
+    height: auto;
+    width: 100%;
+    padding-top: 20px;
+}
+.profile-left .profile-sidenav, .profile-left .sidenav-footer-links{
+    opacity: 0;
+    transition: 0.7s;
+}
+.sidebarnav-width .profile-sidenav, .sidebarnav-width .sidenav-footer-links{
+    opacity: 1;
+}
+.profile-sidenav p {
+    width: 100%;
+    text-align: left;
+}
+.profile-sidenav p a {
+    font-weight: 600;
+    font-size: 10.5px;
+    display: inline-block;
+    padding: 10px 0px;
+    width: 100%;
+    margin: 0;
+    transition: 0.4s linear;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Abel', sans-serif;
+    letter-spacing: 2px;
+}
+.profile-sidenav p a:hover {
+    color: #00ff68;
+}
+.profile-sidenav p a i {
+    font-size: 21px;
+    display: inline-block;
+    margin-right: 15px;
+    top: 3px;
+}
+.profile-sidenav .active {
+    color: #32f9d9;
+    cursor: default;
+}
+.profile-sidenav p:first-of-type a{
+    padding: 21px 0px;
+}
+.profile-sidenav .active:hover {
+    color: #00ff68;
+    cursor: default;
+}
+.profile-sidenav div {
+    margin: 20px 0px;
+    display: table;
+    width: 100%;
+}
+.profile-sidenav div span {
+    font-size: 13px;
+    color: rgb(193, 193, 193);
+    float: left;
+    width: 30%;
+    position: absolute;
+    top: -7px;
+    z-index: 10;
+}
+.profile-sidenav hr {
+    float: right;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin: 20px 0px;
+}
+.sidenav-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 18px 10px;
+    text-align: center;
+    background: rgb(2, 33, 41);
+}
+.sidenav-footer-links a {
+    color: rgba(251, 251, 251, 0.92);
+    margin: 0px 20px;
+    font-size: 12px;
+    font-family: 'abel', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.sidenav-footer-links a:hover{
+    color: #fcc205;
+}
+.sidenav-footer-links a i {
+    font-size: 16px;
+    margin-right: 4px;
+    top: 2px;
+}
+.profile-sidenav .sidenav-search {
+    margin: 0;
+    display: none;
+    width: 100%;
+}
+.profile-right {
+    float: right;
+    width: 100%;
+    transition: 1s;
+    height: 100%;
+    display: table;
+}
+.marginal{
+    width: 80%;
+}
+.profile-nav {
+    color: #105c9a;
+    background-color: #ffffff;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    transition: 1s;
+    padding-left: 0px;
+    left: 0;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.35);
+}
+.marginal .profile-nav{
+    padding-left: 270px;
+
+}
+span#sidenav-opener {
+    float: left;
+    font-size: 32px;
+    line-height: 27px;
+    cursor: pointer;
+    padding: 18px 20px;
+    padding-right: 1px;
+    display: none;
+}
+#profilenav-left-text h5 {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+.profilenav-left {
+    float: left;
+    left: 2%;
+    padding: 5px 30px;
+    padding-left: 1px;
+    font-family: 'abel', sans-serif;
+}
+.profilenav-left div#profilenav-left-image {
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.profilenav-left div#profilenav-left-image img {
+    width: 100%;
+    height: 100%;
+}
+.profilenav-left div#profilenav-left-text {
+    float: right;
+    top: 22px;
+    left: 5px;
+}
+.profilenav-right {
+    float: right;
+}
+.welcome-user{
+    color: #fff;
+    float: right;
+    width: auto;
+}
+.welcome-user:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100%;
+    background: #0a5b9e;
+    border-left: 50px solid;
+    color: #0a5b9e;
+}
+.welcome-user:after {
+    content: "";
+    background: #0a5b9e;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transform: skewX(-30deg);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.welcome-user div.user-div {
+    text-transform: capitalize;
+    font-size: 13px;
+    padding: 20px 30px;
+    font-family: 'abel', sans-serif;
+    letter-spacing: 2px;
+}
+.welcome-user .user-img {
+    display: inline-block;
+    padding-right: 10px;
+    padding: 6px 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-right: 10px;
+}
+.welcome-user div i.mdi.mdi-account-outline {
+    font-size: 21px;
+}
+.welcome-user div.user-div p {
+    display: inline-block;
+    top: -3px;
+}
+.profilebody {
+    height: 100%;
+    width: 100%;
+    display: table;
+    padding-top: 80px;
+    position: absolute;
+}
+.profilebody-body {
+    width: 100%;
+    padding: 0px 55px;
+    transition: 0.8s;
+    display: table;
+}
+#table{ 
+    font-family: 'abel', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #fff;
+
+}
+.profilebody-left {
+    float: left;
+    width: 30%;
+    padding-right: 25px;
+}
+.profilebody-right {
+    float: right;
+    width: 70%;
+    margin-right: 0px;
+}
+.profilebody-left .row .profile-card {
+    width: 100%;
+    height: 413px;
+}
+.profile-card {
+    width: 31%;
+    height: 200px;
+    background: #fff;
+    transition: 0.9s;
+    border-radius: 7px;
+    display: inline-block;
+    margin-right: 22px;
+    overflow: hidden;
+}
+.profile-card.no-display {
+    display: none;
+}
+.profile-card:nth-of-type(1) .profile-card-body i {
+    padding: 40px 20px 29px;
+}
+.profile-card-title {
+    width: 100%;
+    display: table;
+    padding: 0;
+    color: #555;
+    transition: 0.8s;
+}
+.profile-card-title-text h1{
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: 0.8s;
+    text-align: center;
+    font-family: 'abel', sans-serif;
+    letter-spacing: 2px;
+}
+.row:nth-of-type(2) {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.8s;
+}
+.profile-card-title-options #profile-card-title-options-body div#link-hold {
+    text-align: center;
+    width: 50%;
+    transition: 0.8s;
+    float: left;
+}
+.profilewrapper.profile.doc .profile-card-title-options #profile-card-title-options-body div#link-hold {
+    width: 100%;
+}
+.profile-card-title-options #profile-card-title-options-body a {
+    font-size: 12px;
+    padding: 20px 13px;
+    display: inline-block;
+    width: 100%;
+    background: #4682b4;
+    color: #fff;
+    transition: 0.8s;
+    text-transform: uppercase;
+    font-family: 'abel', sans-serif;
+    border-left: 0.4px solid rgba(197, 197, 197, 0.7);
+    letter-spacing: 1px;
+}
+.profile-card-title-options #profile-card-title-options-body a:hover {
+    background: rgba(70, 130, 180, 0.71);
+    color: #fff;
+}
+.profile-card-body {
+    height: 100%;
+    text-align: right;
+}
+.profile-card-body i{
+    font-size: 65px;
+    text-align: center;
+    width: 100%;
+    padding: 22px 20px 6px;
+    color: #4682b4;
+    transition: 0.8s;
+    display: inline-block;
+    width: 100%;
+}
+.row {
+    display: table;
+    width: 100%;
+}
+.row:nth-of-type(1) .profile-card:nth-of-type(3) {
+    margin-right: 0;
+}
+.row:nth-of-type(2) .profile-card {
+    width: 50%;
+    height: 240px;
+    background: #fff;
+}
+.row.search .profile-card {
+    width: 48%;
+}
+.row.search .profile-card:nth-of-type(2) {
+    margin-right: 0;
+}
+.profile-card-title-options {
+    height: 100%;
+}
+.profile-card-title-options #profile-card-title-options-body {
+    height: 100%;
+    top: 0;
+    text-align: center;
+}
+.profile-card .profile-card-title-options #dp {
+    width: 100%;
+    text-align: center;
+    height: 205px;
+    padding: 30px 65px;
+    background: #4682b4;
+}
+.profile-card .profile-card-title-options #dp #dp-img {
+    background: grey;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block
+}
+div#profile-card-title-options-body ul#profile-details li p {
+    border-bottom: 0.4px solid #ccc;
+    padding: 17px 20px;
+    font-size: 13px;
+    font-family: 'abel', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #4e4e4e;
+}
+div#profile-card-title-options-body ul#profile-details {
+    background: #fff;
+}
+div#profile-card-title-options-body ul#profile-details::after {
+    content: '';
+    position: absolute;
+    left: 46%;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid rgba(252, 254, 255, 0.98);
+    clear: both;
+}
+div#profile-card-title-options-body ul#id-details li {
+    font-size: 14px;
+    font-family: 'abel', sans-serif;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 9px 20px;
+    color: #4e4e4e;
+    border-bottom: 0.4px solid rgba(204, 204, 204, 0.78);
+}
+div#profile-card-title-options-body ul#id-details li span {
+    font-weight: 900;
+}
+div#profile-card-title-options-body h1#patient_id {
+    font-size: 17px;
+    text-align: right;
+    padding: 8px 20px;
+    color: #212121;
+    font-family: 'abel', sans-serif;
+    font-weight: 400;
+}
+div#profile-card-title-options-body h1#patient_id span {
+    font-weight: bolder;
+}
+.profilepage-pagination {
+    padding: 20px 55px;
+}
+.pageNumber {
+    padding: 12px 30px;
+    background: #fff;
+    border-radius: 6px;
+    display: table;
+    width: 100%;
+    font-family: 'abel', sans-serif;
+    font-weight: 700;
+}
+.pageNumber h5 {
+    float: left;
+    letter-spacing: 2px;
+}
+.pageNumber p {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #585858;
+    float: right;
+}
+.pageNumber a i {
+    margin-right: 3px;
+    text-decoration: underline;
+    font-size: 15px;
+    position: absolute;
+    left: -19px;
+    top: -2px;
+}
+.pageNumber a {
+    color: #4682b4;
+    text-decoration: underline;
+    display: inline-block;
+    margin-right: 3px;
+    transition: 0.6s;
+}
+.pageNumber a:hover{
+    color: #a20000;
+}
+form[name="updatePazz"] {
+    width: 50%;
+    display: inline-table;
+    background: #fff;
+    padding: 40px 45px;
+    border-radius: 10px;
+}
+form[name="updatePazz"] h4 {
+    color: #333;
+    font-size: 17px;
+    font-weight: 900;
+    font-family: 'abel', sans-serif;
+    padding: 15px 0px 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 1px solid #ccc;
+}
+form[name="updatePazz"] .form-group-minor {
+    padding: 20px 0px;
+    font-family: 'abel', sans-serif;
+    font-size: 13px;
+    clear: both;
+    display: table;
+}
+form[name="updatePazz"] .form-group-minor label {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    float: left;
+}
+form[name="updatePazz"] .form-group-minor input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    float: left;
+}
+form[name="updatePazz"] button {
+    height: auto;
+    width: auto;
+    padding: 8px 27px;
+    background: #105c9a;
+    color: #fff;
+    font-family: 'abel', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+form[name="updatePazz"] button:hover {
+    background: #043b68;
+}
+form[name="updatePazz"] button i {
+    margin-right: 11px;
+    font-size: 19px;
+    top: 1px;
+}
+.profilebody-body.data .profilebody-left, .profilebody-body.data .profilebody-right {
+    width: 48%;
+    background: #fff;
+    margin: 0px 10px 0px 0px;
+    border-radius: 10px;
+}
+.profilebody-body.data form[name="updatedata"] {
+    width: 100%;
+    display: inline-table;
+    background: #fff;
+    padding: 40px 45px;
+    border-radius: 10px;
+}
+.profilebody-body.data form[name="updatedata"] h1{
+    color: #333;
+    font-size: 17px;
+    font-weight: 900;
+    font-family: 'abel', sans-serif;
+    padding: 15px 0px 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 1px solid #ccc;
+}
+.profilebody-body.data form[name="updatedata"] h4 {
+    color: #333;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: 'abel', sans-serif;
+    padding: 15px 0px 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: right;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor {
+    padding: 10px 0px;
+    font-family: 'abel', sans-serif;
+    font-size: 13px;
+    clear: both;
+    display: table;
+    width: 100%;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor label {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    float: left;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor input#upimage {
+    display: none;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor div#dp {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 15px 103px;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor div#dp-img {
+    background: grey;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profilewrapper.profile.doc .profilebody-body.data .profilebody-left {
+    width: 55%;
+}
+.profilewrapper.profile.doc .profilebody-body.data .profilebody-right {
+    width: 43%;
+    margin-right: 0;
+}
+.profilewrapper.profile.doc .profilebody-body.data form[name="updatedata"] .form-group-minor div#dp {
+    padding: 15px 80px;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor .form-group-minute {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor label.btn.btn-large {
+    width: 100%;
+    padding: 10px 10px 18px;
+    background: #105c9a;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 100;
+    transition: 0.7s;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor label.btn.btn-large:hover {
+    background: #022129;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor label.btn.btn-large i{
+    margin-right: 10px;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor input, .profilebody-body.data form[name="updatedata"] .form-group-minor textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 9px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    float: left;
+    width: 65%;
+    font-family: 'abel', sans-serif;
+    font-weight: 800;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor textarea {
+    resize: none;
+    height: 100px;
+}
+.profilebody-body.data form[name="updatedata"] .form-group-minor input[type="date"] {
+    background: none;
+}
+.profilebody-body.data form[name="updatedata"] button {
+    height: auto;
+    width: auto;
+    padding: 8px 27px;
+    background: #105c9a;
+    color: #fff;
+    font-family: 'abel', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.profilebody-body.data form[name="updatedata"] button:hover {
+    background: #043b68;
+}
+.profilebody-body.data form[name="updatedata"] button i {
+    margin-right: 11px;
+    font-size: 19px;
+    top: 1px;
+}
+.profilebody-body.soon h1 {
+    text-align: center;
+    font-size: 60px;
+    line-height: 375px;
+    background: #fff;
+    border-radius: 10px;
+    color: #105c9a;
+    font-family: 'abel', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+.profile-card-body form[name="search"]{
+    padding: 10px 15px 20px;
+    height: 100%;
+}
+.profile-card-body form[name="search"] h1#patient_id {
+    margin-bottom: 12px;
+}
+.profile-card-body form[name="search"] label {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    float: left;
+    font-size: 13px;
+    font-family: 'abel', sans-serif;
+}
+.profile-card-body form[name="search"] input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 9px;
+    font-size: 12px;
+    width: 55%;
+    letter-spacing: 3px;
+    float: left;
+    font-family: 'abel', sans-serif;
+    font-weight: 800;
+}
+.profile-card-body form[name="search"] .form-group-minor {
+    clear: both;
+}
+.profile-card-body form[name="search"] span i {
+    font-size: 24px;
+    padding: 0;
+    width: auto;
+    top: 4px;
+    right: 9px;
+}
+.profile-card-body form[name="search"] .form-group-minor button {
+    background: steelblue;
+    color: #fff;
+    border: none;
+    padding: 10px 35px;
+    font-family: 'abel', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+}
